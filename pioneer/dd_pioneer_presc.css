@@ -1,3 +1,344 @@
-#test{
-	display:inline-block;
+
+@font-face {
+	font-family: 'cambon';
+	src: url('https://cdn.shopify.com/s/files/1/0077/9042/8275/files/Cambon-Book-dd.woff2?v=1587482681') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'sharp';
+	src: url('https://cdn.shopify.com/s/files/1/0077/9042/8275/files/SharpSans-Medium-dd.woff2?6079') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'sharp';
+	src: url('https://cdn.shopify.com/s/files/1/0077/9042/8275/files/SharpSans-Bold-dd.woff2?6079') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+select, date, input {background-color: #FFF    }
+
+#UpdatePanel1:before {
+  content: "Please fill in the information below.  A board-certified doctor will review your information and directly provide a prescription to your medical device provider if necessary. ";
+  color:#666;
+  font-family: 'cambon', serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 175%;
+  display: inline-block;
+}
+
+#UpdatePanel1:after {
+  content: "If you have any questions or concerns, please send us an email at support@dermadry.com or give us a call at this toll-free number: + 1 866-548-3379.";
+  color:#777;
+  font-size: 12px;
+  margin-top: 40px;
+  display: inline-block;
+}
+#UpdatePanel1 { overflow: hidden; }
+
+  @media only screen and (max-width: 768px) {
+      fieldset {width: calc(100% - 20px) !important; padding: 25px 5px !important;   }
+      .inputWrapper label {width: 100% !important; padding-left: 0px !important;      margin-left: 20px !important;   }
+      .inputWrapper input {width: 100% !important; margin-left: 20px !important; background-color: #FFF; width: 87% !important; max-width: 87% !important}
+      legend {font-size: 25pt !important; }
+      select, date {background-color: #FFF !important;   }
+      .navbutton { }
+      .inputWrapper {width: 100% !important ; }
+      #submitBtn2 { margin-top: 20px;}
+
+      #oareas {margin-left:65px; margin-top:10px}
+
+    }
+
+
+        body {
+        	font-size: 100%;
+            font-family: "sharp","Open Sans", Arial, sans-serif;
+        	color: #333;
+        	background-color: #FFF;
+        	-webkit-font-smoothing: antialiased;
+        	-moz-osx-font-smoothing: grayscale;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+<style>
+
+body {
+    background-color: white;
+}
+
+form {
+    background-color: white;
+    padding:16px;
+    width: 100%;
+    min-width: 300px;
+    font-family: "sharp","Open Sans", Arial, sans-serif;
+    display: inline-block;
+    position: relative;
+}
+
+.page {
+    display: block;
+    position: relative;
+    width: 100%;
+    background-color: white;
+}
+
+.inputWrapper2 label {
+    display: block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.inputWrapper2 {
+    display: inline-block;
+}
+
+
+.inputWrapper label {
+    display: block;
+    margin-left: 30px;
+    color: #3e608e;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.inputWrapper {
+    display: inline-block;
+}
+
+.inputWrapper3 {
+    margin-left: 30px;
+}
+
+    .inputWrapper3 label {
+        display: block;
+        position: relative;
+        vertical-align: middle;
+        margin-top: 5px;
+        margin-left: 20px;
+
+        font-family: 'cambon', serif;
+      	color:#3e608e ;
+        font-weight: 400;
+    }
+    .inputWrapper3 label:first-child {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color:#555 ;
+    }
+
+
+fieldset {
+    width: 90%;
+    padding: 20px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border-color: #CCC;
+    -webkit-border-radius: 5px;
+    position: relative;
+    padding: 25px;
+    background: #FAFAFA;
+    outline-color: darkslateblue;
+    box-shadow: 3px 6px 3px 3px #fff;
+        top: 0px;
+        left: -2px;
+    }
+
+legend {
+    font-size: 28pt;
+    color: darkslateblue;
+    font-family: 'cambon', serif;
+
+	   color:#19a1d2 ;
+     padding-left: 10px;
+     padding-right: 10px;
+
+}
+
+h1 {
+    font-size: 45pt;
+    text-align: center;
+}
+
+br {
+    line-height: 2px;
+}
+
+.chklbl {
+    font-size: 13pt;
+    font-weight: lighter;
+    font-family: "sharp","Open Sans", Arial, sans-serif;
+    float: left;
+    line-height: 1.2em;
+    height: 1.2em;
+    margin: 0px 2px 0px 2px;
+    padding: 0px;
+
+}
+
+input[type="checkbox"] {
+    float: left;
+    line-height: 1.2em;
+    height: 1.2em;
+    margin: 0px 4px 0px 10px;
+    padding: 0px;
+    font-size: inherit;
+}
+
+input[type=checkbox] {
+    clear: left;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+p {
+    font-size: 17pt;
+    font-weight: normal;
+    font-family: "sharp","Open Sans", Arial, sans-serif;
+}
+
+label {
+    font-size: 17pt;
+    font-weight: bold;
+    text-align: left;
+    padding-right: 15px;
+}
+
+
+select, date {
+    padding: 5px 10px;
+    width: auto;
+    margin-right: 20px;
+    margin-bottom: 4px;
+    font-size: 12pt;
+    font-family: "sharp","Open Sans", Arial, sans-serif;
+    border: 1px solid #aaaaaa;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-left: 20px;
+    border-radius:4px;
+    background: #FFF;
+}
+
+input {
+    padding: 5px 10px;
+    width: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 12pt;
+    font-family: "sharp","Open Sans", Arial, sans-serif;
+    border: 1px solid #CCC;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-left: 20px;
+    border-radius:4px;
+    background: #FFF;
+}
+
+
+#confirm {
+    font-size: 17pt;
+    font-family: "sharp","Open Sans", Arial, sans-serif;
+    display: none;
+    padding:25px 40px;
+    color:#3e608e;
+    display: block;
+
+    background-color: #F3F5F6;
+    color: #000000;
+    border: 1px solid #aaa;
+    position: fixed;
+    width: 100%;
+    height: 235px;
+    left: 25%;
+    top: 25%;
+    box-sizing: border-box;
+    text-align: center;
+
+    border-radius: 10px;
+}
+
+    #confirm button {
+        font-family: "sharp","Open Sans", Arial, sans-serif;
+        background: white;
+        color: darkslateblue;
+        cursor: pointer;
+        font-size: 1.25em;
+        transition: all 0.5s;
+        border-radius: 10px;
+        width: auto;
+        position: relative;
+        outline: none;
+        border: 1px solid #777;
+        padding:5px 12px;
+        background:#FFF;
+        display: inline-block;
+        cursor: pointer;
+
+    }
+
+    #confirm .message {
+        text-align: center;
+        font-weight: bold;
+        font-family: "sharp","Open Sans", Arial, sans-serif;
+    }
+
+
+.enterbutton {
+    font-family: "sharp","Open Sans", Arial, sans-serif;
+    background: white;
+    color: red;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: all 0.5s;
+    border-radius: 10px;
+    width: auto;
+    position: relative;
+    outline: none;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 3px 6px 4px 4px #888888;
+    display: inline-block;
+    bottom: 20%;
+}
+
+.navbutton {
+    font-family: "sharp","Open Sans", Arial, sans-serif;
+    background: #19a1d2;
+    color: white;
+    cursor: pointer;
+    font-size: 1.25em;
+    transition: all 0.5s;
+    border-radius: 10px;
+    width: auto;
+    position: relative;
+    outline: none;
+    border: 1px solid #777;
+    border-radius: 4px;
+    padding: 6px 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0 1px 3px #369;
+    transition: 0.1s ease-in-out;
+}
+.navbutton:hover {
+    background: #0878a0;
+    transition: 0.2s ease-in-out;
 }
